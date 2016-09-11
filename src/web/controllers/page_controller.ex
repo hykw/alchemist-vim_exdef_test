@@ -15,7 +15,7 @@ defmodule Sample.WrongCase do
   }
 
   def index(conn, _params) do
-    bar = Sample.Module1.foo
+    foo = Sample.Module1.foo
 
     render conn, "index.html"
   end
@@ -25,7 +25,7 @@ defmodule Sample.CorrectCase do
   use Sample.Web, :controller
 
   def index(conn, _params) do
-    bar = Sample.Module1.foo
+    foo = Sample.Module1.foo
 
     render conn, "index.html"
   end
